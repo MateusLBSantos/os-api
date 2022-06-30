@@ -60,7 +60,7 @@ public class ClienteResource {
 		return ResponseEntity.ok().body(newObj);
 	}
 	
-	@DeleteMapping
+	@DeleteMapping("/{id}")
 	public ResponseEntity<Void> delete(@PathVariable Integer id){
 		service.delete(id);
 		return ResponseEntity.noContent().build();
