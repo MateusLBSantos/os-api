@@ -52,14 +52,24 @@ public class DBService {
 		Cliente c9 = new Cliente(null, "Lucimberto Navega Sena Frossard", "571.226.205-30", "(38) 98264-8705");
 		Cliente c10 = new Cliente(null, "Pedro Henrique Manhães Carminatti Moura", "964.551.962-44", "(38) 98264-8705");
 		Cliente c11 = new Cliente(null, "Ian Vogas de Barros Bocafoli", "298.735.358-88", "(38) 98264-8705");
+		
+		
 		OrdemServico os1 = new OrdemServico(null, Prioridade.ALTA, "teste create Os", Status.ANDAMENTO, t1, c1);
+		OrdemServico os2 = new OrdemServico(null, Prioridade.BAIXA, "teste create Os", Status.ABERTO, t2, c2);
+		OrdemServico os3 = new OrdemServico(null, Prioridade.BAIXA, "teste create Os", Status.ABERTO, t3, c3);
+		OrdemServico os4 = new OrdemServico(null, Prioridade.ALTA, "teste create Os", Status.ABERTO, t4, c4);
+		OrdemServico os5 = new OrdemServico(null, Prioridade.MEDIA, "teste create Os", Status.ANDAMENTO, t5, c5);
+		OrdemServico os6 = new OrdemServico(null, Prioridade.MEDIA, "teste create Os", Status.ANDAMENTO, t6, c6);
+		OrdemServico os7 = new OrdemServico(null, Prioridade.ALTA, "teste create Os", Status.ABERTO, t7, c7);
+		OrdemServico os8 = new OrdemServico(null, Prioridade.BAIXA, "teste create Os", Status.ANDAMENTO, t8, c8);
+		OrdemServico os9 = new OrdemServico(null, Prioridade.ALTA, "teste create Os", Status.ABERTO, t9, c9);
 
 		t1.getList().add(os1);
 		c1.getList().add(os1);
 
 		tecnicoRepository.saveAll(Arrays.asList(t1,t2,t3,t4,t5,t6,t7,t8,t9,t10,t11,t12,t13));
 		clienteRepository.saveAll(Arrays.asList(c1,c2,c3,c4,c5,c6,c7,c8,c9,c10,c11));
-		ordemServicoRepository.saveAll(Arrays.asList(os1));
+		ordemServicoRepository.saveAll(Arrays.asList(os1,os2,os3,os4,os5,os6,os7,os8,os9));
 	}
 
 }
